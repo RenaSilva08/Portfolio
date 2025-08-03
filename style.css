@@ -1,0 +1,161 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  background: #111;
+  color: #f0f0f0;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Imagem de fundo escura e transparente */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/mnt/data/ad6fff32-89fb-45c0-8d57-8c61268a8619.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.2);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+/* Cabeçalho */
+header {
+  background: rgba(10, 10, 10, 0.9);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: #00aaff;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+/* Títulos das seções */
+h2 {
+  font-size: 2.2rem; /* Aumentei o tamanho da fonte */
+  margin-bottom: 1.5rem;
+}
+
+/* Seção Sobre mim */
+#sobre {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2.5rem 3rem;
+  margin: 3rem auto 2rem auto;
+  max-width: 720px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  color: #f0f0f0;
+}
+
+/* Seção Projetos - Apenas o container, sem o efeito de hover */
+#projetos {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 3rem 3rem;
+  margin: 0 auto 3rem auto;
+  max-width: 720px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  color: #f0f0f0;
+}
+
+/* Estilo do link que envolve o card */
+.projeto-link {
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: inherit; /* Garante que a cor do texto seja herdada */
+}
+
+/* Estilo do card de projeto */
+.projeto {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem; /* Aumentei o padding para mais espaço */
+  margin-top: 1.5rem;
+  border-left: 5px solid #00aaff;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  color: #f0f0f0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer; /* Adiciona o cursor de 'mão' para indicar que é clicável */
+}
+
+/* Efeito de brilho ao passar o mouse sobre CADA card de projeto */
+.projeto:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+.projeto h3 {
+  font-size: 1.4rem; /* Aumentei o tamanho do título do projeto */
+  margin-bottom: 0.5rem;
+}
+
+.projeto p {
+  font-size: 1.1rem; /* Aumentei o tamanho do parágrafo */
+  margin: 0;
+}
+
+/* Remove a regra para o link interno, pois ele não existe mais */
+/* .projeto a { ... } */
+
+/* Rodapé (previous CSS remains) */
+footer {
+  background-color: rgba(10, 10, 10, 0.9);
+  color: #fff;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: auto;
+  box-shadow: inset 0 1px 3px rgba(255,255,255,0.1);
+}
+
+.footer-container a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-container a:hover {
+  color: #00aaff;
+}
+
+.social-icons {
+  margin-bottom: 1.2rem;
+}
+
+.social-icons a {
+  margin: 0 12px;
+  font-size: 1.8rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00aaff;
+}
